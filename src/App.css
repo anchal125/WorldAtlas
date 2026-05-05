@@ -1,0 +1,157 @@
+:root {
+  --pbg: white;
+  --pcolor: black;
+  --bgnav:rgb(245, 167, 22);
+  --sbg:rgba(246, 174, 41, 0.9);
+}
+
+[data-theme="dark"] {
+  --pbg: black;
+  --pcolor: white;
+  --bgnav: rgb(82, 81, 81);
+  --sbg:rgb(128, 128, 128,0.8);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  color:var(--pcolor);
+  z-index:1;
+} 
+
+
+
+.app{
+  user-select: none;
+  background: var(--pbg);
+  overflow: hidden;
+  min-height: 100dvh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word;
+}
+
+nav{
+  background: var(--bgnav);
+}
+
+.cursor{
+  z-index:1003;
+  position:fixed;
+  width:20px;
+  height:20px;
+  background: rgb(215, 213, 213);
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px rgb(144, 143, 143) ;
+}
+
+
+.card {
+  background: var(--sbg);
+  padding: 1.2rem 1.2rem; 
+  border-radius: 1.25rem; /* 20px */
+  width: 100%;
+  border:1px solid var(--pcolor);
+}
+
+
+button{
+  outline:0;
+  cursor: pointer;
+  border: 1px solid var(--pcolor); 
+  background: var(--sbg);
+} 
+
+button:active{
+  transform: scale(1.06);
+}
+
+a{
+  text-decoration: none;
+}
+
+.middle{
+  padding-bottom: 95.2px;
+  margin: 0px auto;
+  flex:1;
+  display: flex;
+}
+
+.scrollUp{
+  position:fixed;
+  padding:.4rem .6rem;
+  bottom:1rem;
+  right:1rem;
+  border-radius: 50%;
+  z-index:2;
+}
+
+.arrowup{
+  animation: move .4s infinite alternate-reverse;
+}
+
+.sidebar{
+  display: none;
+}
+
+@keyframes move{
+  100%{
+    transform:translateY(.3rem)
+  }
+}
+
+
+@media screen and (max-width:600px){
+  html{
+    font-size:14px ;
+  }
+  .middle{
+    padding-bottom: 85.5px;
+  }
+  .toggleCanvas{
+    margin-top: 42px !important;
+  }
+  .sidebar{
+    display: block !important;
+  }
+  .menu{
+    display: block !important;
+  }
+
+  .navlinks{
+    display: none !important;
+  }
+
+  .navbar{
+    justify-content: space-between !important;
+  }
+}
+
+
+@media screen and (max-width:450px){
+  html{
+    font-size:13px;
+  }
+  .middle{
+    padding-bottom: 78.1px;
+  }
+  .toggleCanvas{
+    margin-top: 39px !important;
+  }
+  
+
+}
+
+@media screen and (max-width:400px){
+  
+  .middle{
+    padding-bottom: 61.6px;
+  }
+
+}
+
+
+
+

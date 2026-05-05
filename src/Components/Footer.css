@@ -1,0 +1,33 @@
+.footer {
+  background: var(--sbg);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-info, .copyright {
+  display: flex;
+  padding: 0.625rem; /* 10px */
+  flex-wrap: wrap;
+  gap: 0.6875rem; /* 11px */
+  justify-content: space-around;
+}
+
+.copyright {
+  background: var(--bgnav);
+}
+
+.footericon, .copyright-items {
+  display: flex;
+  gap: 0.3125rem; /* 5px */
+}
+
+.copyright-items span {
+  cursor: pointer;
+}
+
+@media screen and (max-width:400px){
+  .footer{
+    font-size: 0.7rem;
+  }
+}

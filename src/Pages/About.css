@@ -1,0 +1,42 @@
+.about {
+  font-size: 1.2rem;
+  padding: 0.625rem 1.25rem 1.25rem; /* 10px 20px */
+  line-height: 1.7;
+}  
+
+.about h2 {
+  text-align: center; 
+  letter-spacing: 0.1875rem; /* 3px */
+}
+
+.cards {
+  display: grid;
+  margin-top: 1.25rem; /* 20px */
+  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr)); /* 200px */
+  gap: 1.8rem; 
+}
+
+.about-card{
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card::after{
+  content:"";
+  position: absolute;
+  width:4px;
+  height:100%;
+  left:0;
+  top:0;
+  transition:all .4s;
+  background: var(--pcolor);
+}
+
+.about-card:hover{
+  transform: scale(1.06) !important;
+}
+
+.about-card:hover::after{
+  width: 100%;
+  height:4px;
+}

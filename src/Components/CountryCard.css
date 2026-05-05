@@ -1,0 +1,49 @@
+.country-card{
+  perspective: 1000px;
+  word-break: break-word;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  position: relative;
+  height:17.5rem;
+  font-size: 1.15rem;
+}
+
+.front,.back{
+  background:var(--bgnav) ;
+  position: absolute;
+  width:calc(100% - 2.4rem);
+  height: calc(100% - 2.4rem);
+  backface-visibility: hidden;
+}
+
+.front{
+  transform: rotateY(0deg);
+}
+
+.back{
+  padding: .2rem;
+  text-align: center;
+  transform: rotateY(180deg);
+  display: grid;
+  place-items: center;
+}
+
+.country-card:hover{
+  transform: rotatey(180deg);
+}
+
+.country-card img{
+  width: 100%;
+  height: 100%; 
+  object-fit: contain;
+}
+
+
+.read {
+  display: flex;
+  gap: 0.4375rem; /* 7px → 0.4375rem */
+  padding: 0.3125rem; /* 5px → 0.3125rem */
+  border-radius: 0.3125rem; /* 5px → 0.3125rem */
+  align-items: center;
+  margin-top: 0.625rem; /* 10px → 0.625rem */
+}

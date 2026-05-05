@@ -1,0 +1,29 @@
+.contact {
+  padding: 1.25rem; /* 20px */
+  display: grid;
+  place-items: center;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+  align-items: center;
+}
+
+.contact input,.contact textarea {
+  width: 20rem; /* 290px */
+  color: black;
+  padding: 0.625rem; /* 10px */
+  resize: none;
+  outline: 0;
+}
+
+form button {
+  padding: 0.625rem; /* 10px */
+}

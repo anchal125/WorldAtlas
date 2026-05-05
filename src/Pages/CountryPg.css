@@ -1,0 +1,46 @@
+.countrypg{
+  position: relative;
+  align-self: center;
+  margin:0.8rem 0px;
+  width:100vw;
+  max-height: 75vh;
+  overflow: auto;
+}
+
+.countrypg a{
+  display:block;
+  top:1%;
+  left: .5rem;
+  position: absolute;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0) !important;
+}
+
+.countrypgbox{
+  overflow-x: hidden;
+  width:100%;
+  padding:calc(1% + 1.7rem) 1.25rem 1.25rem;
+  display: flex;
+  background: var(--sbg);
+  gap: 1.25rem; /* 20px */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.countrypg img{
+  flex: 1 1 0; 
+  height: 15rem; /* 250px */
+  max-width: 100%;
+  min-width: 16.875rem; /* 270px */
+  object-fit: scale-down;
+}
+
+.countrydata{
+  font-size: 1.1rem;
+  min-width: 16.875rem; /* 270px */
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem; /* 20px */
+}

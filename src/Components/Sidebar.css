@@ -1,0 +1,22 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(80px);
+  z-index: 100;
+  font-size: 18px;
+  font-weight: bold;
+  background: var(--sbg);
+  padding:15px;
+  width:max(200px,40%);
+  border-left: 1px solid var(--pcolor);
+}
+
+.sidelinks{
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap:5.5vh;
+  align-items: start;
+}

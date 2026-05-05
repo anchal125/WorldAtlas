@@ -1,0 +1,53 @@
+.main-home {
+  font-size: 1.2rem;
+  padding: 3.125rem 1.25rem 1.25rem; /* 50px 20px 20px */
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 1.25rem; /* 20px */
+  letter-spacing: 0.1875rem; /* 3px */
+}               
+
+.home .right {
+  flex: 1 1 0;
+  overflow: hidden;
+  height: 15.625rem; /* 250px */
+  max-width: 100%;
+  min-width: 16.875rem; /* 270px */
+}
+
+.home .right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.home-text {
+  min-width: 16.875rem; /* 270px */
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px */
+  align-items: start;
+}
+
+.home-text button {
+  background: linear-gradient(to right,var(--bgnav),var(--pcolor),var(--bgnav));
+  background-size: 200% 100%;
+  letter-spacing: 0.1875rem; /* 3px */
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+  border-radius: 0.625rem; /* 10px */
+  color:var(--pbg);
+  animation:movebg 1s linear infinite;
+}
+
+@keyframes movebg {
+
+  100%{
+    background-position:-100% 0% ;
+  }
+  
+}
+
+
