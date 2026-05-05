@@ -11,28 +11,19 @@ export const useCountries = () => {
 
   const filteredCountries = useMemo(() => {
     return apiData.filter((item) => {
-      if (debouncedSearch) {
-        if (filter === "All")
-          return item.name.common
-            .toLowerCase()
-            .includes(debouncedSearch.toLowerCase());
-        else
-          return (
-            item.name.common
-              .toLowerCase()
-              .includes(debouncedSearch.toLowerCase()) &&
-            item.region === filter
-          );
-      } else {
-        if (filter === "All") return apiData;
-        else return item.region === filter;
-      }
+      const matchesSearch = item.name.common
+      .toLowerCase()
+      .includes(debouncedSearch);
+
+      const matchesFilter = filter === "All" || item.region === filter;
+
+      return matchesSearch && matchesFilter;
     });
   }, [debouncedSearch, apiData, filter]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setDebouncedSearch(search);
+      setDebouncedSearch(search.trim().toLowerCase());
     }, 500);
 
     return () => clearTimeout(timer);
