@@ -28,28 +28,6 @@ A modern React + Vite country explorer web app with smooth animations, routing, 
 - React Icons
 - ESLint
 
-## Project Structure
-
-```txt
-thapawebsite/
-  public/
-  src/
-    Components/      # Reusable UI parts (Navbar, Footer, Cards, Loader, Sidebar, etc.)
-    Pages/           # Route pages (Home, About, Country, CountryPg, Contact, Error)
-    hooks/           # Custom hooks (useCountries, useAppLogic)
-    App.jsx          # App layout + route definitions
-    main.jsx         # App entry (BrowserRouter + ScrollToTop)
-```
-
-## Routes
-
-- `/` - Home
-- `/About` - About section/details
-- `/Country` - Country listing with search/filter
-- `/Country/:name` - Country detail page
-- `/Contact` - Contact form
-- `*` - Error/fallback page
-
 ## Getting Started
 
 ### 1) Install dependencies
