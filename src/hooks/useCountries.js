@@ -12,8 +12,8 @@ export const useCountries = () => {
   const filteredCountries = useMemo(() => {
     return apiData.filter((item) => {
       const matchesSearch = item.name.common
-      .toLowerCase()
-      .includes(debouncedSearch);
+        .toLowerCase()
+        .includes(debouncedSearch);
 
       const matchesFilter = filter === "All" || item.region === filter;
 
@@ -33,7 +33,7 @@ export const useCountries = () => {
     startTransition(async () => {
       try {
         const data = await fetch(
-          "https://restcountries.com/v3.1/all?fields=name,population,region,capital,flags"
+          "https://restcountries.com/v5.1/all?fields=name,population,region,capital,flags",
         );
         if (!data.ok) {
           throw new Error(`HTTP error! Status: ${data.status}`);
