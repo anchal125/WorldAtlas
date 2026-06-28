@@ -1,13 +1,13 @@
-import { Links } from "./Links"
-import "./sidebar.css"
+import { Links } from "./Links";
+import "./Sidebar.css";
 
-export const Sidebar = ({setTheme,theme}) => {
+export const Sidebar = ({ setTheme, theme }) => {
   const handleTheme = () => {
     setTheme((p) => (p === "light" ? "dark" : "light"));
-  }; 
-  return ( 
+  };
+  return (
     <div className="sidebar">
-      <Links classname="sidelinks" handleTheme={handleTheme} theme={theme}/>
+      <Links classname="sidelinks" handleTheme={handleTheme} theme={theme} />
     </div>
-  )
-}
+  );
+};
